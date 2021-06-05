@@ -39,6 +39,6 @@ async def post_list(subreddit,filter):
         async for sm in sr.rising(limit=5):
             sm_list.append(sm)
     if filter == 'top':
-        async for sm in sr.top(limit=10):
+        async for sm in sr.top(limit=5):
             sm_list.append(sm)
     return sm_list
