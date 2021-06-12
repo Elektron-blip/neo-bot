@@ -22,6 +22,6 @@ jobs:
         git config --local user.name "GitHub-Actions"
         git config --local remote.origin.url "https://${{ github.token }}@github.com/${{ github.repository }}.git"
     - name: Commit files
-      run: git commit -S -am 'GitHub Actions - Formatted using black formatter.'
+      run: git commit -am 'GitHub Actions - Formatted using black formatter.'
     - name: Push changes
       run: git push origin main
