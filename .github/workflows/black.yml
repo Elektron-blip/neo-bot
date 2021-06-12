@@ -20,7 +20,8 @@ jobs:
       run: |
         git config --local user.mail "actions@github.com"
         git config --local user.name "GitHub-Actions"
-        git config --local remote.origin.url "https://${{ github.token }}@github.com/${{ github.repository }}.git"
+        git config --local user.password ${{ secrets.GITHUB_TOKEN }}
+        git config --local remote.origin.url "https://github.com/${{ github.repository }}.git"
     - name: Commit files
       run: git commit -am 'GitHub Actions - Formatted using black formatter.'
     - name: Push changes
