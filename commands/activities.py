@@ -79,7 +79,6 @@ class Entertainment(commands.Cog):
             try:
                 code = (await self.client.http.request(r, json=payload))["code"]
             except discord.Forbidden:
-
                 return await res.respond(
                     content="I Need the `Create Invite` permission.", type=7
                 )
